@@ -15,14 +15,12 @@ YUI.add('moodle-atto_pumukitpr-button', function (Y, NAME) {
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
- * @package    atto_pumukitpr
- * @copyright  2013 Damyon Wiese  <damyon@moodle.com>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
 /**
  * Atto pumukitpr selection tool.
+ *
+ * @package    atto_pumukitpr
+ * @copyright  Teltek Video Research
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  * @module moodle-atto_pumukitpr_alignment-button
  * @namespace M.atto_pumukitpr
