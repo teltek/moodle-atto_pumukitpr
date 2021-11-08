@@ -41,7 +41,7 @@ zip -r pumukitpr.zip pumukitpr
 
 References:
 
-[1] https://docs.moodle.org/dev/YUI/Shifter
-[2] https://docs.moodle.org/dev/Atto
-[3] https://docs.moodle.org/dev/Grunt
-[4] https://github.com/justinhunt/moodle-atto_newtemplate/
+* https://docs.moodle.org/dev/YUI/Shifter
+* https://docs.moodle.org/dev/Atto
+* https://docs.moodle.org/dev/Grunt
+* https://github.com/justinhunt/moodle-atto_newtemplate/

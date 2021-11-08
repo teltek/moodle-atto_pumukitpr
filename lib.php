@@ -15,12 +15,15 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
+
+/**
  * Atto text editor integration version file.
  *
- * @copyright  2013 Damyon Wiese  <damyon@moodle.com>
+ * @package    atto_pumukitpr
+ * @copyright  Teltek Video Research
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 defined('MOODLE_INTERNAL') || exit();
 
 /**

@@ -15,12 +15,15 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
- * pumukitpr settings.
+
+/**
+ * Plugin settings
  *
- * @copyright COPYRIGHTINFO
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    atto_pumukitpr
+ * @copyright  Teltek Video Research
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 defined('MOODLE_INTERNAL') || exit();
 
 $ADMIN->add('editoratto', new admin_category('atto_pumukitpr', new lang_string('pluginname', 'atto_pumukitpr')));
@@ -28,48 +31,60 @@ $ADMIN->add('editoratto', new admin_category('atto_pumukitpr', new lang_string('
 $settings = new admin_settingpage('atto_pumukitpr_settings', new lang_string('settings', 'atto_pumukitpr'));
 if ($ADMIN->fulltree) {
     // An option setting
-    $settings->add(new admin_setting_configtext(
-        'atto_pumukitpr/pumukitprurl',
-        get_string('pumukitprurl', 'atto_pumukitpr'),
-        get_string('pumukitprurldesc', 'atto_pumukitpr'),
-        'https://naked-pr-up2u.teltek.es',
-        PARAM_URL
-    ));
+    $settings->add(
+        new admin_setting_configtext(
+            'atto_pumukitpr/pumukitprurl',
+            get_string('pumukitprurl', 'atto_pumukitpr'),
+            get_string('pumukitprurldesc', 'atto_pumukitpr'),
+            'https://naked-pr-up2u.teltek.es',
+            PARAM_URL
+        )
+    );
 
-    $settings->add(new admin_setting_configtext(
-        'atto_pumukitpr/dialogtitle',
-        get_string('dialogtitle', 'atto_pumukitpr'),
-        get_string('dialogtitledesc', 'atto_pumukitpr'),
-        get_string('dialogtitledefval', 'atto_pumukitpr'),
-        PARAM_TEXT
-    ));
+    $settings->add(
+        new admin_setting_configtext(
+            'atto_pumukitpr/dialogtitle',
+            get_string('dialogtitle', 'atto_pumukitpr'),
+            get_string('dialogtitledesc', 'atto_pumukitpr'),
+            get_string('dialogtitledefval', 'atto_pumukitpr'),
+            PARAM_TEXT
+        )
+    );
 
-    $settings->add(new admin_setting_configtext(
-        'atto_pumukitpr/password',
-        get_string('password', 'atto_pumukitpr'),
-        get_string('passworddesc', 'atto_pumukitpr'),
-        get_string('passworddefval', 'atto_pumukitpr'),
-        PARAM_TEXT
-    ));
+    $settings->add(
+        new admin_setting_configtext(
+            'atto_pumukitpr/password',
+            get_string('password', 'atto_pumukitpr'),
+            get_string('passworddesc', 'atto_pumukitpr'),
+            get_string('passworddefval', 'atto_pumukitpr'),
+            PARAM_TEXT
+        )
+    );
 
-    $settings->add(new admin_setting_configcheckbox(
-        'atto_pumukitpr/showpr',
-        get_string('showprtext', 'atto_pumukitpr'),
-        get_string('showprdesc', 'atto_pumukitpr'),
-        1
-    ));
+    $settings->add(
+        new admin_setting_configcheckbox(
+            'atto_pumukitpr/showpr',
+            get_string('showprtext', 'atto_pumukitpr'),
+            get_string('showprdesc', 'atto_pumukitpr'),
+            1
+        )
+    );
 
-    $settings->add(new admin_setting_configcheckbox(
-        'atto_pumukitpr/showplaylist',
-        get_string('showplaylisttext', 'atto_pumukitpr'),
-        get_string('showplaylistdesc', 'atto_pumukitpr'),
-        0
-    ));
+    $settings->add(
+        new admin_setting_configcheckbox(
+            'atto_pumukitpr/showplaylist',
+            get_string('showplaylisttext', 'atto_pumukitpr'),
+            get_string('showplaylistdesc', 'atto_pumukitpr'),
+            0
+        )
+    );
 
-    $settings->add(new admin_setting_configcheckbox(
-        'atto_pumukitpr/showsharedvideos',
-        get_string('showsharedvideostext', 'atto_pumukitpr'),
-        get_string('showsharedvideosdesc', 'atto_pumukitpr'),
-        1
-    ));
+    $settings->add(
+        new admin_setting_configcheckbox(
+            'atto_pumukitpr/showsharedvideos',
+            get_string('showsharedvideostext', 'atto_pumukitpr'),
+            get_string('showsharedvideosdesc', 'atto_pumukitpr'),
+            1
+        )
+    );
 }

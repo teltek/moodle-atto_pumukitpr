@@ -13,14 +13,12 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
- * @package    atto_pumukitpr
- * @copyright  2013 Damyon Wiese  <damyon@moodle.com>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
 /**
  * Atto pumukitpr selection tool.
+ *
+ * @package    atto_pumukitpr
+ * @copyright  Teltek Video Research
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  * @module moodle-atto_pumukitpr_alignment-button
  * @namespace M.atto_pumukitpr
@@ -52,7 +50,7 @@ var ITEM_UPLOAD = '<li class="nav-item">' +
 
 var TABCONTENT_UPLOAD =
     '<div class="tab-pane" id="{{elementid}}_upload">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/upload?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen allow="microphone; camera"></iframe>' +
+    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/upload?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 TEMPLATE = TEMPLATE + ITEM_UPLOAD;
@@ -67,7 +65,7 @@ var ITEM_PERSONAL_RECORDER =
 
 var TABCONTENT_PERSONALRECORDER =
     '<div data-medium-type="personal_recorder" class="tab-pane" id="{{elementid}}_personal_recorder">' +
-    '<iframe class="custom-tab-content" id="pumukitpr_iframe_recorder" src="{{PUMUKITURL}}/openedx/sso/personal_recorder?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen allow="microphone; camera"></iframe>' +
+    '<iframe class="custom-tab-content" id="pumukitpr_iframe_recorder" src="{{PUMUKITURL}}/openedx/sso/personal_recorder?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 var TEMPLATE_MANAGER =
@@ -79,7 +77,7 @@ var TEMPLATE_MANAGER =
 
 var TABCONTENT_MANAGERSERIES =
     '<div class="tab-pane active" id="{{elementid}}_manager">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen  allow="microphone; camera"></iframe>' +
+    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen  allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 var TEMPLATE_PLAYLIST =
@@ -91,7 +89,7 @@ var TEMPLATE_PLAYLIST =
 
 var TABCONTENT_MANAGERPLAYLIST =
     '<div class="tab-pane" id="{{elementid}}_playlists">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en&playlist=true" allowfullscreen allow="microphone; camera"></iframe>' +
+    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en&playlist=true" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 var TEMPLATE_SHAREDVIDEOS =
@@ -103,7 +101,7 @@ var TEMPLATE_SHAREDVIDEOS =
 
 var TABCONTENT_SHAREDVIDEOS =
     '<div class="tab-pane" id="{{elementid}}_public">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/search/public/multimediaobjects" allowfullscreen allow="microphone; camera"></iframe>' +
+    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/search/public/multimediaobjects" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto.EditorPlugin, [], {
@@ -136,7 +134,7 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
                 this.get('hash') + "&username=" +
                 this.get('username') + "&email="+
                 this.get('email') + "&lang=en";
-            iframe.allow = "microphone; camera";
+            iframe.allow = "microphone; camera; display-capture";
             document.getElementsByTagName('body')[0].appendChild(iframe);
         }
 
@@ -323,7 +321,7 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
 
         var iframe =
             '<div class="embed-responsive embed-responsive-16by9 tv-iframe">' +
-            '<iframe class="embed-responsive-item tv-iframe-item" src="' + url + '" allowfullscreen allow="microphone; camera"></iframe>' +
+            '<iframe class="embed-responsive-item tv-iframe-item" src="' + url + '" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
             '</div>';
         this.get('host').insertContentAtFocusPoint(iframe);
         this.markUpdated();

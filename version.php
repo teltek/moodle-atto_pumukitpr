@@ -15,14 +15,34 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
- * Atto text editor integration version file.
+/**
+ * Plugin version file
  *
- * @copyright  2013 Damyon Wiese  <damyon@moodle.com>
+ * @package    atto_pumukitpr
+ * @copyright  Teltek Video Research
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 defined('MOODLE_INTERNAL') || exit();
 
-$plugin->version = 2020100604;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires = 2016112900;        // Requires this Moodle version.
-$plugin->component = 'atto_pumukitpr';  // Full name of the plugin (used for diagnostics).
+// PumukitPR plugin version
+$plugin->version = 2021110801;
+
+// PumukitPR moodle require version
+$plugin->requires = 2016112900;
+
+// PumukitPR maturity
+$plugin->maturity = MATURITY_STABLE;
+
+// PumukitPR plugin full name
+$plugin->component = 'atto_pumukitpr';
+
+// PumukitPR plugin dependencies
+$plugin->dependencies = [
+    'filter_pumukitpr' => 2021110801
+];
+
+// PumukitPR release
+$plugin->release = '1';
+
+
