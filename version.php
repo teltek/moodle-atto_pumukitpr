@@ -44,5 +44,3 @@ $plugin->dependencies = [
 
 // PumukitPR release
 $plugin->release = '1';
-
-
