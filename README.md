@@ -1,47 +1,40 @@
 PuMuKIT Atto plugin for Moodle
 ==============================
 
-How to generate and update the build for Atto Plugin
+This plugin allows PuMuKIT integration on Atto editor.
 
-## Step 1: Install dependencies for the work.
-```
-sudo apt-get install npm
-sudo apt-get install python-software-properties python g++ make
-sudo apt-get update
-sudo apt-get install nodejs
-sudo ln -s /usr/bin/nodejs /usr/local/bin/node
-sudo npm install shifter@0.4.6 -g
-```
+If you want to develop for this plugin see [DEVELOP DOC](https://github.com/teltek/moodle-atto_pumukitpr/blob/master/DEVELOPER.md) 
 
-## Step 2: Go to plugin folder
+## How to install
 
+### Step 1: Download the latest code version from GitHub
 ```
-cd {project}/{pathToLMSBundle}/Resources/data/pumoodle/editor/atto/plugins/pumukitpr/src/button
+https://github.com/teltek/moodle-atto_pumukitpr
 ```
 
-## Step 3: Build plugin on code change ( reports errors, recommended for develop )
+### Step 2: Create .zip to install
 
+Move to downloaded folder and execute the following command.
 ```
-shifter --watch
-```
-
-## Step 4: Build to upload code and generate the new version.
-
-```
-shifter
+zip -r moodle-atto_pumukitpr.zip  moodle-atto_pumukitpr/ -x "moodle-atto_pumukitpr/.git/*" -x "moodle-atto_pumukitpr/.github/*" -x "moodle-atto_pumukitpr/.gitignore" 
 ```
 
-## Step 5: Install the plugin on Moodle
+### Step 3: Upload and configure
 
-First generates zip of plugin.
+Upload .zip on Moodle -> Administration -> Plugins -> Install.
+
+Configure the plugin with your [PuMuKIT data password](https://github.com/teltek/PumukitLmsBundle/blob/master/Resources/doc/Configuration.md)
+
+### Step 4: Activate plugin on Atto Editor
+
+Go to Moodle -> Administration -> Plugin -> Atto HTML editor -> Settings.
+
+Search configuration for: Toolbar config
+
+Add on "files" line the "pumukitpr" key.
+
 ```
-docker cp . moodle:/var/www/html/lib/editor/atto/plugins/pumukitpr
-zip -r pumukitpr.zip pumukitpr
+files = emojipicker, image, media, recordrtc, managefiles, h5p, pumukitpr
 ```
 
-References:
-
-* https://docs.moodle.org/dev/YUI/Shifter
-* https://docs.moodle.org/dev/Atto
-* https://docs.moodle.org/dev/Grunt
-* https://github.com/justinhunt/moodle-atto_newtemplate/
+Save and the plugin will be ready to use.
