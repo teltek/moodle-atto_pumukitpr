@@ -23,7 +23,7 @@ zip -r moodle-atto_pumukitpr.zip  moodle-atto_pumukitpr/ -x "moodle-atto_pumukit
 
 Upload .zip on Moodle -> Administration -> Plugins -> Install.
 
-Configure the plugin with your [PuMuKIT data password](https://github.com/teltek/PumukitLmsBundle/blob/master/Resources/doc/Configuration.md)
+Configure the plugin with your [PuMuKIT data password and PuMuKIT domain](https://github.com/teltek/PumukitLmsBundle/blob/master/Resources/doc/Configuration.md)
 
 ### Step 4: Activate plugin on Atto Editor
 
