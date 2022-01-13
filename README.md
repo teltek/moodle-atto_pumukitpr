@@ -5,6 +5,8 @@ This plugin allows PuMuKIT integration on Atto editor.
 
 If you want to develop for this plugin see [DEVELOP DOC](https://github.com/teltek/moodle-atto_pumukitpr/blob/master/DEVELOPER.md) 
 
+[IMPORTANT] Before install this plugin installs [PuMuKIT Filter](https://github.com/teltek/moodle-filter_pumukitpr/)
+
 ## How to install
 
 ### Step 1: Download the latest code version from GitHub
