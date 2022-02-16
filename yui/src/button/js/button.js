@@ -146,7 +146,6 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
             iframe.allow = "microphone; camera; display-capture";
             document.getElementsByTagName('body')[0].appendChild(iframe);
         }
-
     },
 
     /**
@@ -254,6 +253,8 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
                 USERNAME: this.get('username'),
                 EMAIL: this.get('email'),
                 CAPABILITY: this.get('capability'),
+                PASSWORD: this.get('password'),
+                DEBUG: this.get('enabledebugmode'),
                 component: COMPONENTNAME,
                 defaultflavor: this.get('defaultflavor'),
                 clickedicon: clickedicon,
@@ -263,6 +264,14 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
                 button_playlists: M.util.get_string('button_playlists', COMPONENTNAME),
                 button_sharevideos: M.util.get_string('button_sharevideos', COMPONENTNAME)
             }));
+
+        if(this.get('enabledebugmode') == 1) {
+            console.log('URL: ' + this.get('pumukitprurl'));
+            console.log('Hash: ' + this.get('hash'));
+            console.log('User: ' + this.get('username'));
+            console.log('Email: ' + this.get('email'));
+            console.log('Pwd: ' + this.get('password'));
+        }
 
         this._form = content;
         //this._form.one('.' + CSS.INPUTSUBMIT).on('click', this._doInsert, this);
@@ -367,6 +376,12 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
             value: ''
         },
         capability: {
+            value: ''
+        },
+        password: {
+            value: ''
+        },
+        enabledebugmode: {
             value: ''
         }
     }
