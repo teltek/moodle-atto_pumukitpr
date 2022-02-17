@@ -254,6 +254,7 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
                 EMAIL: this.get('email'),
                 CAPABILITY: this.get('capability'),
                 PASSWORD: this.get('password'),
+                DATE: this.get('date'),
                 DEBUG: this.get('enabledebugmode'),
                 component: COMPONENTNAME,
                 defaultflavor: this.get('defaultflavor'),
@@ -267,6 +268,7 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
 
         if(this.get('enabledebugmode') == 1) {
             console.log('URL: ' + this.get('pumukitprurl'));
+            console.log('Date: ' + this.get('date'));
             console.log('Hash: ' + this.get('hash'));
             console.log('User: ' + this.get('username'));
             console.log('Email: ' + this.get('email'));
@@ -379,6 +381,9 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
             value: ''
         },
         password: {
+            value: ''
+        },
+        date: {
             value: ''
         },
         enabledebugmode: {
