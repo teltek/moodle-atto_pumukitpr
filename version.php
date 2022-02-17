@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || exit();
 
 // PumukitPR plugin version
-$plugin->version = 2021110801;
+$plugin->version = 2022021701;
 
 // PumukitPR moodle require version
 $plugin->requires = 2016112900;
