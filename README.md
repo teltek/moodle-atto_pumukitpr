@@ -9,16 +9,16 @@ If you want to develop for this plugin see [DEVELOP DOC](https://github.com/telt
 
 ## How to install
 
-### Step 1: Download the latest code version from GitHub
+### Step 1: Clone the latest code version from GitHub
 ```
-https://github.com/teltek/moodle-atto_pumukitpr
+git clone https://github.com/teltek/moodle-atto_pumukitpr pumukitpr
 ```
 
 ### Step 2: Create .zip to install
 
 Move to downloaded folder and execute the following command.
 ```
-zip -r moodle-atto_pumukitpr.zip  moodle-atto_pumukitpr/ -x "moodle-atto_pumukitpr/.git/*" -x "moodle-atto_pumukitpr/.github/*" -x "moodle-atto_pumukitpr/.gitignore" 
+zip -r moodle-atto_pumukitpr.zip pumukitpr -x "pumukitpr/.git/*" -x "pumukitpr/.github/*" -x "pumukitpr/.gitignore" 
 ```
 
 ### Step 3: Upload and configure
