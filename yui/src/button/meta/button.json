@@ -1,5 +1,5 @@
 {
-  "moodle-atto_pumukitpr-button": {
+  "moodle-atto_pumukitmedia-button": {
     "requires": [
       "moodle-editor_atto-plugin"
     ]

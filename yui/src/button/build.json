@@ -1,7 +1,7 @@
 {
-  "name": "moodle-atto_pumukitpr-button",
+  "name": "moodle-atto_pumukitmedia-button",
   "builds": {
-    "moodle-atto_pumukitpr-button": {
+    "moodle-atto_pumukitmedia-button": {
       "jsfiles": [
         "button.js"
       ]

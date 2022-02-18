@@ -19,7 +19,7 @@
 /**
  * Atto text editor integration version file.
  *
- * @package    atto_pumukitpr
+ * @package    atto_pumukitmedia
  * @copyright  Teltek Video Research
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || exit();
 /**
  * Initialise the strings required for js.
  */
-function atto_pumukitpr_strings_for_js()
+function atto_pumukitmedia_strings_for_js()
 {
     global $PAGE;
 
@@ -42,7 +42,7 @@ function atto_pumukitpr_strings_for_js()
         'button_sharevideos',
     ];
 
-    $PAGE->requires->strings_for_js($strings, 'atto_pumukitpr');
+    $PAGE->requires->strings_for_js($strings, 'atto_pumukitmedia');
 }
 
 /**
@@ -52,23 +52,23 @@ function atto_pumukitpr_strings_for_js()
  * @param mixed $options
  * @param mixed $fpoptions
  */
-function atto_pumukitpr_params_for_js($elementid, $options, $fpoptions)
+function atto_pumukitmedia_params_for_js($elementid, $options, $fpoptions)
 {
     global $USER;
 
     $params = [];
 
-    $params['pumukitprurl'] = get_config('atto_pumukitpr', 'pumukitprurl');
-    $params['dialogtitle'] = get_config('atto_pumukitpr', 'dialogtitle');
+    $params['pumukitmediaurl'] = get_config('atto_pumukitmedia', 'pumukitmediaurl');
+    $params['dialogtitle'] = get_config('atto_pumukitmedia', 'dialogtitle');
     $params['username'] = $USER->username;
     $params['email'] = $USER->email;
-    $params['showpr'] = get_config('atto_pumukitpr', 'showpr');
-    $params['showplaylist'] = get_config('atto_pumukitpr', 'showplaylist');
-    $params['showsharedvideos'] = get_config('atto_pumukitpr', 'showsharedvideos');
+    $params['showpr'] = get_config('atto_pumukitmedia', 'showpr');
+    $params['showplaylist'] = get_config('atto_pumukitmedia', 'showplaylist');
+    $params['showsharedvideos'] = get_config('atto_pumukitmedia', 'showsharedvideos');
 
     $date = date('d/m/Y');
-    $password = get_config('atto_pumukitpr', 'password');
-    $domain = parse_url($params['pumukitprurl'], PHP_URL_HOST);
+    $password = get_config('atto_pumukitmedia', 'password');
+    $domain = parse_url($params['pumukitmediaurl'], PHP_URL_HOST);
     $hash = md5($USER->username.$password.$date.$domain);
     $params['hash'] = $hash;
 
@@ -83,5 +83,5 @@ function get_capability()
 
     $context = context_course::instance($COURSE->id);
 
-    return has_capability('atto/pumukitpr:view', $context);
+    return has_capability('atto/pumukitmedia:view', $context);
 }

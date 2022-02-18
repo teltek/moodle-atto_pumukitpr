@@ -18,13 +18,13 @@
 /**
  * Plugin capabilities
  *
- * @package    atto_pumukitpr
+ * @package    atto_pumukitmedia
  * @copyright  Teltek Video Research
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $capabilities = [
-    'atto/pumukitpr:view' => [
+    'atto/pumukitmedia:view' => [
         'captype' => 'read',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [
