@@ -18,29 +18,18 @@
 /**
  * Plugin version file
  *
- * @package    atto_pumukitpr
+ * @package    atto_pumukitmedia
  * @copyright  Teltek Video Research
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || exit();
 
-// PumukitPR plugin version
-$plugin->version = 2022021701;
-
-// PumukitPR moodle require version
+$plugin->version = 2022021801;
 $plugin->requires = 2016112900;
-
-// PumukitPR maturity
 $plugin->maturity = MATURITY_STABLE;
-
-// PumukitPR plugin full name
-$plugin->component = 'atto_pumukitpr';
-
-// PumukitPR plugin dependencies
+$plugin->component = 'atto_pumukitmedia';
 $plugin->dependencies = [
-    'filter_pumukitpr' => 2021110801
+    'filter_pumukitmedia' => 2022021801
 ];
-
-// PumukitPR release
 $plugin->release = '1';

@@ -16,9 +16,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'atto_pumukitpr', language 'en'.
+ * Strings for component 'atto_pumukitmedia', language 'en'.
  *
- * @package    atto_pumukitpr
+ * @package    atto_pumukitmedia
  * @copyright  Teltek Video Research
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -31,8 +31,8 @@ $string['dialogtitledefval'] = 'Add PersonalRecorder video';
 $string['password'] = 'Password';
 $string['passworddesc'] = 'Shared secret between Moodle and Pumukit';
 $string['passworddefval'] = 'ThisIsASecretPasswordChangeMe';
-$string['pumukitprurl'] = 'Pumukit URL';
-$string['pumukitprurldesc'] = 'Pumukit URL, like https://pumukitpr.host/pumoodle/searchmultimediaobjects';
+$string['pumukitmediaurl'] = 'Pumukit URL';
+$string['pumukitmediaurldesc'] = 'Pumukit URL, like https://pumukitmedia.host/pumoodle/searchmultimediaobjects';
 $string['button_upload'] = 'Upload';
 $string['button_pr'] = 'Personal Recorder';
 $string['button_myvideos'] = 'My videos';
@@ -47,4 +47,4 @@ $string['showplaylistdesc'] = 'Enable or deactivate playlist task';
 $string['showsharedvideos'] = 'Show all videos task';
 $string['showsharedvideostext'] = 'Show all videos task';
 $string['showsharedvideosdesc'] = 'Enable or deactivate all videos task';
-$string['pumukitpr:view'] = 'Show PuMuKIT atto plugin';
+$string['pumukitmedia:view'] = 'Show PuMuKIT atto plugin';

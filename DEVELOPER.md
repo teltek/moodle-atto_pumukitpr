@@ -1,4 +1,4 @@
-## MOODLE-ATTO_PUMUKITPR DEVELOPER GUIDE
+## MOODLE-ATTO_pumukitmedia DEVELOPER GUIDE
 
 How to generate and update the build for Atto Plugin
 
@@ -28,7 +28,7 @@ shifter
 
 First generates zip of plugin.
 ```
-zip -r moodle-atto_pumukitpr.zip  moodle-atto_pumukitpr/ -x "moodle-atto_pumukitpr/.git/*" -x "moodle-atto_pumukitpr/.github/*" -x "moodle-atto_pumukitpr/.gitignore" 
+zip -r moodle-atto_pumukitmedia.zip  moodle-atto_pumukitmedia/ -x "moodle-atto_pumukitmedia/.git/*" -x "moodle-atto_pumukitmedia/.github/*" -x "moodle-atto_pumukitmedia/.gitignore" 
 ```
 
 References:

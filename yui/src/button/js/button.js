@@ -14,21 +14,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Atto pumukitpr selection tool.
+ * Atto pumukitmedia selection tool.
  *
- * @package    atto_pumukitpr
+ * @package    atto_pumukitmedia
  * @copyright  Teltek Video Research
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
- * @module moodle-atto_pumukitpr_alignment-button
- * @namespace M.atto_pumukitpr
+ * @module moodle-atto_pumukitmedia_alignment-button
+ * @namespace M.atto_pumukitmedia
  * @class Button
  * @extends M.editor_atto.EditorPlugin
  */
 
-var COMPONENTNAME = 'atto_pumukitpr';
-var FLAVORCONTROL = 'pumukitpr_flavor';
-var LOGNAME = 'atto_pumukitpr';
+var COMPONENTNAME = 'atto_pumukitmedia';
+var FLAVORCONTROL = 'pumukitmedia_flavor';
+var LOGNAME = 'atto_pumukitmedia';
 
 var CSS = {
     INPUTSUBMIT: 'atto_media_urlentrysubmit',
@@ -50,7 +50,9 @@ var ITEM_UPLOAD = '<li class="nav-item">' +
 
 var TABCONTENT_UPLOAD =
     '<div class="tab-pane" id="{{elementid}}_upload">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/upload?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
+    '<iframe class="custom-tab-content"' +
+    ' src="{{PUMUKITURL}}/openedx/sso/upload?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en"' +
+    ' allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 TEMPLATE = TEMPLATE + ITEM_UPLOAD;
@@ -65,7 +67,9 @@ var ITEM_PERSONAL_RECORDER =
 
 var TABCONTENT_PERSONALRECORDER =
     '<div data-medium-type="personal_recorder" class="tab-pane" id="{{elementid}}_personal_recorder">' +
-    '<iframe class="custom-tab-content" id="pumukitpr_iframe_recorder" src="{{PUMUKITURL}}/openedx/sso/personal_recorder?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
+    '<iframe class="custom-tab-content" id="pumukitmedia_iframe_recorder"' +
+    ' src="{{PUMUKITURL}}/openedx/sso/personal_recorder?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en"' +
+    ' allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 var TEMPLATE_MANAGER =
@@ -77,7 +81,9 @@ var TEMPLATE_MANAGER =
 
 var TABCONTENT_MANAGERSERIES =
     '<div class="tab-pane active" id="{{elementid}}_manager">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en" allowfullscreen  allow="microphone; camera; display-capture"></iframe>' +
+    '<iframe class="custom-tab-content"' +
+    ' src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en"' +
+    ' allowfullscreen  allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 var TEMPLATE_PLAYLIST =
@@ -89,7 +95,9 @@ var TEMPLATE_PLAYLIST =
 
 var TABCONTENT_MANAGERPLAYLIST =
     '<div class="tab-pane" id="{{elementid}}_playlists">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en&playlist=true" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
+    '<iframe class="custom-tab-content"' +
+    ' src="{{PUMUKITURL}}/openedx/sso/manager?hash={{HASH}}&username={{USERNAME}}&email={{EMAIL}}&lang=en&playlist=true"' +
+    ' allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
 var TEMPLATE_SHAREDVIDEOS =
@@ -101,10 +109,11 @@ var TEMPLATE_SHAREDVIDEOS =
 
 var TABCONTENT_SHAREDVIDEOS =
     '<div class="tab-pane" id="{{elementid}}_public">' +
-    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/search/public/multimediaobjects" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
+    '<iframe class="custom-tab-content" src="{{PUMUKITURL}}/openedx/search/public/multimediaobjects"' +
+    ' allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
     '</div>';
 
-Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto.EditorPlugin, [], {
+Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_atto.EditorPlugin, [], {
 
     _receiveMessageBind: null,
 
@@ -118,19 +127,19 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
         this.addButton({
             icon: 'e/insert_edit_video',
             //icon: 'icon',
-            //iconComponent: 'atto_pumukitpr',
-            buttonName: 'pumukitpr',
+            //iconComponent: 'atto_pumukitmedia',
+            buttonName: 'pumukitmedia',
             callback: this._displayDialogue,
             callbackArgs: 'iconone'
         });
 
         // Force SSO
-        var id = "pumukitpr_iframe_sso";
+        var id = "pumukitmedia_iframe_sso";
         if (!document.getElementById(id)) {
             var iframe = document.createElement('iframe');
             iframe.id = id;
             iframe.style.display = "none";
-            iframe.src = this.get('pumukitprurl') + "/openedx/sso/manager?hash=" +
+            iframe.src = this.get('pumukitmediaurl') + "/openedx/sso/manager?hash=" +
                 this.get('hash') + "&username=" +
                 this.get('username') + "&email="+
                 this.get('email') + "&lang=en";
@@ -152,7 +161,7 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
     },
 
      /**
-     * Display the pumukitpr Dialogue
+     * Display the pumukitmedia Dialogue
      *
      * @method _displayDialogue
      * @private
@@ -240,7 +249,7 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
                 elementid: this.get('host').get('elementid'),
                 CSS: CSS,
                 FLAVORCONTROL: FLAVORCONTROL,
-                PUMUKITURL: this.get('pumukitprurl'),
+                PUMUKITURL: this.get('pumukitmediaurl'),
                 HASH: this.get('hash'),
                 USERNAME: this.get('username'),
                 EMAIL: this.get('email'),
@@ -304,7 +313,7 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
 
         // If no file is there to insert, don't do it.
         if (!e.data.mmId && !e.data.playlist && !e.data.url){
-            Y.log('No URL from pumukitpr value could be found.', 'warn', LOGNAME);
+            Y.log('No URL from pumukitmedia value could be found.', 'warn', LOGNAME);
             return;
         }
 
@@ -312,9 +321,9 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
 
         this.editor.focus();
 
-        var url = this.get('pumukitprurl') + '/openedx/openedx/embed/?id=' + e.data.mmId;
+        var url = this.get('pumukitmediaurl') + '/openedx/openedx/embed/?id=' + e.data.mmId;
         if(e.data.playlist) {
-            url = this.get('pumukitprurl') + '/openedx/openedx/playlist/embed/?id=' + e.data.playlist;
+            url = this.get('pumukitmediaurl') + '/openedx/openedx/playlist/embed/?id=' + e.data.playlist;
         } else if(e.data.url){
             url = e.data.url;
         }
@@ -327,13 +336,13 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
         this.markUpdated();
     },
 
-    _closeSharedWindow : function(e){
-        var sharedWindow = document.getElementById('pumukitpr_iframe_recorder');
+    _closeSharedWindow : function(){
+        var sharedWindow = document.getElementById('pumukitmedia_iframe_recorder');
         sharedWindow.parentNode.removeChild(sharedWindow);
     }
 }, {
     ATTRS: {
-        pumukitprurl: {
+        pumukitmediaurl: {
             value: ''
         },
         hash: {
@@ -359,6 +368,6 @@ Y.namespace('M.atto_pumukitpr').Button = Y.Base.create('button', Y.M.editor_atto
         },
         capability: {
             value: ''
-        },
+        }
     }
 });
