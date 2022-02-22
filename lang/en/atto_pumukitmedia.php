@@ -47,4 +47,5 @@ $string['showplaylistdesc'] = 'Enable or deactivate playlist task';
 $string['showsharedvideos'] = 'Show all videos task';
 $string['showsharedvideostext'] = 'Show all videos task';
 $string['showsharedvideosdesc'] = 'Enable or deactivate all videos task';
+$string['enabledebugmode'] = 'Debug mode';
 $string['pumukitmedia:view'] = 'Show PuMuKIT atto plugin';

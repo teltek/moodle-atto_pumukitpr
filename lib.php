@@ -65,6 +65,7 @@ function atto_pumukitmedia_params_for_js($elementid, $options, $fpoptions)
     $params['showpr'] = get_config('atto_pumukitmedia', 'showpr');
     $params['showplaylist'] = get_config('atto_pumukitmedia', 'showplaylist');
     $params['showsharedvideos'] = get_config('atto_pumukitmedia', 'showsharedvideos');
+    $params['enabledebugmode'] = get_config('atto_pumukitpr', 'enabledebugmode');
 
     $date = date('d/m/Y');
     $password = get_config('atto_pumukitmedia', 'password');
@@ -72,6 +73,11 @@ function atto_pumukitmedia_params_for_js($elementid, $options, $fpoptions)
     $hash = md5($USER->username.$password.$date.$domain);
     $params['hash'] = $hash;
 
+    if($params['enabledebugmode'] == 1) {
+        $params['password'] = base64_encode(get_config('atto_pumukitpr', 'password'));
+    }
+
+    $params['date'] = $date;
     $params['capability'] = get_capability();
 
     return $params;
