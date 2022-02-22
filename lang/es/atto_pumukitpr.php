@@ -23,8 +23,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'PuMuKIT PersonalRecorder (Atto)';
-$string['settings'] = 'PuMuKIT PersonalRecorder (Atto)';
+$string['pluginname'] = 'PuMuKIT Media (Atto)';
+$string['settings'] = 'PuMuKIT Media (Atto)';
 $string['dialogtitle'] = 'Título del diálogo de la modal';
 $string['dialogtitledesc'] = 'Título del diálogo de la modal';
 $string['dialogtitledefval'] = 'Añadir vídeo de PersonalRecorder';

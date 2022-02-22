@@ -23,11 +23,11 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'PuMuKIT PersonalRecorder (Atto)';
-$string['settings'] = 'PuMuKIT PersonalRecorder (Atto)';
+$string['pluginname'] = 'PuMuKIT Media (Atto)';
+$string['settings'] = 'PuMuKIT Media (Atto)';
 $string['dialogtitle'] = 'Modal dialog title';
 $string['dialogtitledesc'] = 'Modal dialog title';
-$string['dialogtitledefval'] = 'Add PersonalRecorder video';
+$string['dialogtitledefval'] = 'Add PuMuKIT video';
 $string['password'] = 'Password';
 $string['passworddesc'] = 'Shared secret between Moodle and Pumukit';
 $string['passworddefval'] = 'ThisIsASecretPasswordChangeMe';

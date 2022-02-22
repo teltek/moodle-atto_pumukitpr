@@ -91,8 +91,8 @@ if ($ADMIN->fulltree) {
     $settings->add(
         new admin_setting_configcheckbox(
             'atto_pumukitpr/enabledebugmode',
-            get_string('enabledebugmode', 'atto_pumukitpr'),
-            get_string('enabledebugmode', 'atto_pumukitpr'),
+            get_string('enabledebugmode', 'atto_pumukitmedia'),
+            get_string('enabledebugmode', 'atto_pumukitmedia'),
             0
         )
     );
