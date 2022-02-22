@@ -341,7 +341,8 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
 
         var iframe =
             '<div class="embed-responsive embed-responsive-16by9 tv-iframe">' +
-            '<iframe class="embed-responsive-item tv-iframe-item" src="' + url + '" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
+            '<iframe class="embed-responsive-item tv-iframe-item" src="' + url +
+            '" allowfullscreen allow="microphone; camera; display-capture"></iframe>' +
             '</div>';
         this.get('host').insertContentAtFocusPoint(iframe);
         this.markUpdated();
