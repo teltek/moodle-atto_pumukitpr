@@ -74,7 +74,7 @@ function atto_pumukitmedia_params_for_js($elementid, $options, $fpoptions)
     $params['hash'] = $hash;
 
     if($params['enabledebugmode'] == 1) {
-        $params['password'] = base64_encode(get_config('atto_pumukitpr', 'password'));
+        $params['password'] = base64_encode(get_config('atto_pumukitmedia', 'password'));
     }
 
     $params['date'] = $date;

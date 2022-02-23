@@ -269,7 +269,7 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
             }));
 
         if(this.get('enabledebugmode') == 1) {
-            console.log('URL: ' + this.get('pumukitprurl'));
+            console.log('URL: ' + this.get('pumukitmediaurl'));
             console.log('Date: ' + this.get('date'));
             console.log('Hash: ' + this.get('hash'));
             console.log('User: ' + this.get('username'));
