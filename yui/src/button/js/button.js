@@ -332,9 +332,9 @@ Y.namespace('M.atto_pumukitmedia').Button = Y.Base.create('button', Y.M.editor_a
 
         this.editor.focus();
 
-        var url = this.get('pumukitmediaurl') + '/openedx/openedx/embed/?id=' + e.data.mmId;
+        var url = this.get('pumukitmediaurl') + '/openedx/openedx/embed/' + e.data.mmId;
         if(e.data.playlist) {
-            url = this.get('pumukitmediaurl') + '/openedx/openedx/playlist/embed/?id=' + e.data.playlist;
+            url = this.get('pumukitmediaurl') + '/openedx/openedx/playlist/embed/' + e.data.playlist;
         } else if(e.data.url){
             url = e.data.url;
         }
