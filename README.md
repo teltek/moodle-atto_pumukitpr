@@ -1,7 +1,7 @@
 PuMuKIT Atto plugin for Moodle
 ==============================
 
-This plugin allows PuMuKIT integration on Atto editor.
+This plugin allows PuMuKIT (version 3.9 or lower) integration on Atto editor.
 
 If you want to develop for this plugin see [DEVELOP DOC](https://github.com/teltek/moodle-atto_pumukitmedia/blob/master/DEVELOPER.md) 
 
