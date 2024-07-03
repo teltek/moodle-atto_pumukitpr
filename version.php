@@ -25,11 +25,11 @@
 
 defined('MOODLE_INTERNAL') || exit();
 
-$plugin->version = 2024070302;
+$plugin->version = 2023024601;
 $plugin->requires = 2016112900;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->component = 'atto_pumukitmedia';
 $plugin->dependencies = [
     'filter_pumukitmedia' => 2022021801
 ];
-$plugin->release = '1.1.0';
+$plugin->release = '1';
