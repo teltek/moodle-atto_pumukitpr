@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || exit();
 
-$plugin->version = 2023024601;
+$plugin->version = 2024101400;
 $plugin->requires = 2016112900;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->component = 'atto_pumukitmedia';
